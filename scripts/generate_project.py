@@ -70,7 +70,7 @@ def generate():
     info = dict(CFBundleDevelopmentRegion='fr', CFBundleDisplayName='ShabbatTV', CFBundleExecutable='$(EXECUTABLE_NAME)',
         CFBundleIdentifier='$(PRODUCT_BUNDLE_IDENTIFIER)', CFBundleInfoDictionaryVersion='6.0', CFBundleName='ShabbatTV', CFBundlePackageType='APPL',
         CFBundleShortVersionString='$(MARKETING_VERSION)', CFBundleVersion='$(CURRENT_PROJECT_VERSION)', LSRequiresIPhoneOS=True,
-        UILaunchScreen={}, UISupportedInterfaceOrientations=['UIInterfaceOrientationPortrait', 'UIInterfaceOrientationLandscapeLeft', 'UIInterfaceOrientationLandscapeRight'],
+        UILaunchScreen={}, UISupportedInterfaceOrientations=['UIInterfaceOrientationPortrait', 'UIInterfaceOrientationPortraitUpsideDown', 'UIInterfaceOrientationLandscapeLeft', 'UIInterfaceOrientationLandscapeRight'],
         UIApplicationSceneManifest={'UIApplicationSupportsMultipleScenes':False, 'UISceneConfigurations':{
             'UIWindowSceneSessionRoleApplication':[{'UISceneConfigurationName':'Main', 'UISceneDelegateClassName':'$(PRODUCT_MODULE_NAME).MainSceneDelegate'}],
             'UIWindowSceneSessionRoleExternalDisplayNonInteractive':[{'UISceneConfigurationName':'External', 'UISceneDelegateClassName':'$(PRODUCT_MODULE_NAME).ExternalSceneDelegate'}]}})
