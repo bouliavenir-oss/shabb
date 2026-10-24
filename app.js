@@ -154,7 +154,7 @@ async function init(){
   }catch(error){toast(error.message);$('#cache-status').textContent='Stockage indisponible';log('storage-error',error.message);}
   if('serviceWorker'in navigator){try{
     await navigator.serviceWorker.register('./sw.js',{scope:'./'});await navigator.serviceWorker.ready;
-    const cache=await caches.open('shabbattv-shell-v2');const keys=await cache.keys();cacheReady=keys.length>=13;
+    const cache=await caches.open('shabbattv-shell-v3');const keys=await cache.keys();cacheReady=keys.length>=14;
     $('#cache-status').textContent=cacheReady?'Application disponible hors ligne':'Cache incomplet : recharger avec Internet';
   }catch(error){$('#cache-status').textContent='Cache hors ligne indisponible';log('cache-error',error.message);}}
   else $('#cache-status').textContent='Mode hors ligne non pris en charge';

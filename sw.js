@@ -1,5 +1,5 @@
-const CACHE='shabbattv-shell-v2';
-const ASSETS=['./','./index.html','./styles.css','./app.js','./core.js','./storage.js','./storage-worker.js','./player.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png'];
+const CACHE='shabbattv-shell-v3';
+const ASSETS=['./','./index.html','./styles.css','./app.js','./core.js','./storage.js','./state-store.js','./storage-worker.js','./player.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
 // An update waits until the old application has closed: never replace code during playback.
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
