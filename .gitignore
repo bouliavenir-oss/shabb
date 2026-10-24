@@ -1,0 +1,16 @@
+.DS_Store
+.build/
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.p12
+*.p8
+*.mobileprovision
+*.ipa
+*.mp4
+*.mov
+*.mkv
+*.partial
+.env
+__pycache__/

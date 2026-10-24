@@ -1,0 +1,218 @@
+// !$*UTF8*$!
+{
+  "archiveVersion" = 1;
+  "classes" = {
+  };
+  "objectVersion" = 56;
+  "objects" = {
+    "9BB3567448E08584B9720E47" = {
+      "isa" = "PBXFileReference";
+      "lastKnownFileType" = "sourcecode.swift";
+      "path" = "ios/App/AppModel.swift";
+      "sourceTree" = "<group>";
+    };
+    "0D181298C2851A5D2B6C5564" = {
+      "isa" = "PBXBuildFile";
+      "fileRef" = "9BB3567448E08584B9720E47";
+    };
+    "C9F7BC1CC4D13418FD76965D" = {
+      "isa" = "PBXFileReference";
+      "lastKnownFileType" = "sourcecode.swift";
+      "path" = "ios/Diagnostics/EventLog.swift";
+      "sourceTree" = "<group>";
+    };
+    "3F115D68F6B07AA1C69468D4" = {
+      "isa" = "PBXBuildFile";
+      "fileRef" = "C9F7BC1CC4D13418FD76965D";
+    };
+    "AB215E98D59D47A2F6D45315" = {
+      "isa" = "PBXFileReference";
+      "lastKnownFileType" = "sourcecode.swift";
+      "path" = "ios/HDMI/Scenes.swift";
+      "sourceTree" = "<group>";
+    };
+    "6CAB92C2EAD58011320B4B04" = {
+      "isa" = "PBXBuildFile";
+      "fileRef" = "AB215E98D59D47A2F6D45315";
+    };
+    "5928A87C3224B60547F58F6E" = {
+      "isa" = "PBXFileReference";
+      "lastKnownFileType" = "sourcecode.swift";
+      "path" = "ios/Player/PlaybackEngine.swift";
+      "sourceTree" = "<group>";
+    };
+    "653EBDD918C13C6A37E216D6" = {
+      "isa" = "PBXBuildFile";
+      "fileRef" = "5928A87C3224B60547F58F6E";
+    };
+    "529921ACA8A739967B1BCBAC" = {
+      "isa" = "PBXFileReference";
+      "lastKnownFileType" = "sourcecode.swift";
+      "path" = "ios/Scheduler/Schedule.swift";
+      "sourceTree" = "<group>";
+    };
+    "CFA0BBC8A3D9AB89F20AC44B" = {
+      "isa" = "PBXBuildFile";
+      "fileRef" = "529921ACA8A739967B1BCBAC";
+    };
+    "2A2F79B98357C3382B50C723" = {
+      "isa" = "PBXFileReference";
+      "lastKnownFileType" = "sourcecode.swift";
+      "path" = "ios/Storage/LibraryStore.swift";
+      "sourceTree" = "<group>";
+    };
+    "D3C63FE8769A4C9AF72EA639" = {
+      "isa" = "PBXBuildFile";
+      "fileRef" = "2A2F79B98357C3382B50C723";
+    };
+    "BA41B71640BFC77118CE3A53" = {
+      "isa" = "PBXFileReference";
+      "lastKnownFileType" = "sourcecode.swift";
+      "path" = "ios/UI/RootView.swift";
+      "sourceTree" = "<group>";
+    };
+    "1CFD94148EE778A3131136CD" = {
+      "isa" = "PBXBuildFile";
+      "fileRef" = "BA41B71640BFC77118CE3A53";
+    };
+    "A8792157CB4F27FB949C035F" = {
+      "isa" = "PBXFileReference";
+      "explicitFileType" = "wrapper.application";
+      "path" = "ShabbatTV.app";
+      "sourceTree" = "BUILT_PRODUCTS_DIR";
+    };
+    "0A3E27B8CA818264D75C8D81" = {
+      "isa" = "PBXGroup";
+      "children" = ("A8792157CB4F27FB949C035F");
+      "name" = "Products";
+      "sourceTree" = "<group>";
+    };
+    "4813494D137E1631BBA301D5" = {
+      "isa" = "PBXGroup";
+      "children" = ("9BB3567448E08584B9720E47", "C9F7BC1CC4D13418FD76965D", "AB215E98D59D47A2F6D45315", "5928A87C3224B60547F58F6E", "529921ACA8A739967B1BCBAC", "2A2F79B98357C3382B50C723", "BA41B71640BFC77118CE3A53", "0A3E27B8CA818264D75C8D81");
+      "sourceTree" = "<group>";
+    };
+    "878A52FC5FF6A57D50B7B870" = {
+      "isa" = "PBXSourcesBuildPhase";
+      "buildActionMask" = 2147483647;
+      "files" = ("0D181298C2851A5D2B6C5564", "3F115D68F6B07AA1C69468D4", "6CAB92C2EAD58011320B4B04", "653EBDD918C13C6A37E216D6", "CFA0BBC8A3D9AB89F20AC44B", "D3C63FE8769A4C9AF72EA639", "1CFD94148EE778A3131136CD");
+      "runOnlyForDeploymentPostprocessing" = 0;
+    };
+    "E2AA269EB967A8853A258BFA" = {
+      "isa" = "PBXFrameworksBuildPhase";
+      "buildActionMask" = 2147483647;
+      "files" = ();
+      "runOnlyForDeploymentPostprocessing" = 0;
+    };
+    "41D311A605520FC7B8B9A980" = {
+      "isa" = "PBXResourcesBuildPhase";
+      "buildActionMask" = 2147483647;
+      "files" = ();
+      "runOnlyForDeploymentPostprocessing" = 0;
+    };
+    "AA9B1D3BE1353EBD76471D11" = {
+      "isa" = "XCBuildConfiguration";
+      "buildSettings" = {
+        "PRODUCT_NAME" = "ShabbatTV";
+        "PRODUCT_BUNDLE_IDENTIFIER" = "com.shabbattv.ipad";
+        "INFOPLIST_FILE" = "ios/App/Info.plist";
+        "GENERATE_INFOPLIST_FILE" = "NO";
+        "SWIFT_VERSION" = "5.0";
+        "IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+        "TARGETED_DEVICE_FAMILY" = "2";
+        "SDKROOT" = "iphoneos";
+        "SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+        "SUPPORTS_MACCATALYST" = "NO";
+        "CODE_SIGN_STYLE" = "Automatic";
+        "CURRENT_PROJECT_VERSION" = "1";
+        "MARKETING_VERSION" = "0.1.0";
+        "SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+        "DEBUG_INFORMATION_FORMAT" = "dwarf";
+        "ENABLE_TESTABILITY" = "YES";
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+        "CLANG_ENABLE_MODULES" = "YES";
+        "LD_RUNPATH_SEARCH_PATHS" = ("$(inherited)", "@executable_path/Frameworks");
+      };
+      "name" = "Debug";
+    };
+    "2B23A31EEC75B029432F2445" = {
+      "isa" = "XCBuildConfiguration";
+      "buildSettings" = {
+        "CLANG_ENABLE_MODULES" = "YES";
+      };
+      "name" = "Debug";
+    };
+    "1E2E67F111F111E446D58E6C" = {
+      "isa" = "XCBuildConfiguration";
+      "buildSettings" = {
+        "PRODUCT_NAME" = "ShabbatTV";
+        "PRODUCT_BUNDLE_IDENTIFIER" = "com.shabbattv.ipad";
+        "INFOPLIST_FILE" = "ios/App/Info.plist";
+        "GENERATE_INFOPLIST_FILE" = "NO";
+        "SWIFT_VERSION" = "5.0";
+        "IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+        "TARGETED_DEVICE_FAMILY" = "2";
+        "SDKROOT" = "iphoneos";
+        "SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+        "SUPPORTS_MACCATALYST" = "NO";
+        "CODE_SIGN_STYLE" = "Automatic";
+        "CURRENT_PROJECT_VERSION" = "1";
+        "MARKETING_VERSION" = "0.1.0";
+        "SWIFT_OPTIMIZATION_LEVEL" = "-O";
+        "DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+        "ENABLE_TESTABILITY" = "NO";
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "";
+        "CLANG_ENABLE_MODULES" = "YES";
+        "LD_RUNPATH_SEARCH_PATHS" = ("$(inherited)", "@executable_path/Frameworks");
+      };
+      "name" = "Release";
+    };
+    "07CA1E69F6068DEA30A4DA6B" = {
+      "isa" = "XCBuildConfiguration";
+      "buildSettings" = {
+        "CLANG_ENABLE_MODULES" = "YES";
+      };
+      "name" = "Release";
+    };
+    "7BCEE9A04133D8A2FED7D4D3" = {
+      "isa" = "XCConfigurationList";
+      "buildConfigurations" = ("AA9B1D3BE1353EBD76471D11", "1E2E67F111F111E446D58E6C");
+      "defaultConfigurationIsVisible" = 0;
+      "defaultConfigurationName" = "Release";
+    };
+    "B4E10CAA9C5E22150B71559C" = {
+      "isa" = "XCConfigurationList";
+      "buildConfigurations" = ("2B23A31EEC75B029432F2445", "07CA1E69F6068DEA30A4DA6B");
+      "defaultConfigurationIsVisible" = 0;
+      "defaultConfigurationName" = "Release";
+    };
+    "34A04005BCAF206EEC990BD9" = {
+      "isa" = "PBXNativeTarget";
+      "buildConfigurationList" = "7BCEE9A04133D8A2FED7D4D3";
+      "buildPhases" = ("878A52FC5FF6A57D50B7B870", "E2AA269EB967A8853A258BFA", "41D311A605520FC7B8B9A980");
+      "buildRules" = ();
+      "dependencies" = ();
+      "name" = "ShabbatTV";
+      "productName" = "ShabbatTV";
+      "productReference" = "A8792157CB4F27FB949C035F";
+      "productType" = "com.apple.product-type.application";
+    };
+    "244210E48437B6556980A702" = {
+      "isa" = "PBXProject";
+      "attributes" = {
+        "LastUpgradeCheck" = "1600";
+      };
+      "buildConfigurationList" = "B4E10CAA9C5E22150B71559C";
+      "compatibilityVersion" = "Xcode 14.0";
+      "developmentRegion" = "fr";
+      "hasScannedForEncodings" = 0;
+      "knownRegions" = ("fr", "en", "Base");
+      "mainGroup" = "4813494D137E1631BBA301D5";
+      "productRefGroup" = "0A3E27B8CA818264D75C8D81";
+      "projectDirPath" = "";
+      "projectRoot" = "";
+      "targets" = ("34A04005BCAF206EEC990BD9");
+    };
+  };
+  "rootObject" = "244210E48437B6556980A702";
+}

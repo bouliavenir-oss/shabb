@@ -1,0 +1,38 @@
+name: Apple build and scheduler tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: macos-15
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: xcodebuild -version && swift --version
+      - name: Validate repository
+        run: python3 scripts/check_project.py
+      - name: Test the real Swift scheduler
+        run: swift test
+      - name: Build iPad simulator application
+        run: >-
+          xcodebuild -project ShabbatTV.xcodeproj -scheme ShabbatTV
+          -configuration Debug -sdk iphonesimulator
+          -destination 'generic/platform=iOS Simulator'
+          -derivedDataPath build/simulator CODE_SIGNING_ALLOWED=NO build
+      - name: Build unsigned device archive
+        run: >-
+          xcodebuild -project ShabbatTV.xcodeproj -scheme ShabbatTV
+          -configuration Release -destination 'generic/platform=iOS'
+          -archivePath build/ShabbatTV-unsigned.xcarchive
+          CODE_SIGNING_ALLOWED=NO archive
+      - name: Package unsigned archive (not installable)
+        run: ditto -c -k --sequesterRsrc --keepParent build/ShabbatTV-unsigned.xcarchive build/ShabbatTV-unsigned.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ShabbatTV-unsigned-not-installable
+          path: build/ShabbatTV-unsigned.zip
+          retention-days: 14
