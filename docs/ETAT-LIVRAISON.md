@@ -26,4 +26,4 @@ Miniatures, catégories, frise proportionnelle et glisser-déposer, profils Shab
 
 AVFoundation `isPlayable` et SHA-256 ne décodent pas toutes les images : tester chaque fichier. La sortie HDMI ne peut être certifiée par la seule détection d’une scène. Aucun contrôle du volume physique de la TV. Une interruption sans autorisation de reprise ou une réinitialisation des services multimédias peut laisser le programme noir jusqu’à intervention. La fermeture système/crash/redémarrage ne peut pas être récupérée automatiquement. Le noir affiche du noir ; il n’éteint pas le rétroéclairage du téléviseur. Les gros imports n’ont pas encore de pourcentage en octets ; l’interface montre le fichier courant et le nombre de fichiers.
 
-Prochaine étape : compiler sur macOS, corriger les erreurs détectées, signer après inscription Apple, puis tester le premier film et dix transitions sur l’iPad cible.
+Compilation macOS et démarrage simulateur désormais réussis, voir le rapport. Prochaine étape : signer après inscription Apple, puis tester le premier film et dix transitions sur l’iPad cible. La validation de lecture réelle reste ouverte.
