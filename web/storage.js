@@ -1,12 +1,9 @@
-let db, worker;
+import {createStateStore} from './state-store.js';
+const stateStore=createStateStore(indexedDB);
+let worker;
 let sequence=0;
 const pending=new Map();
 export async function openStore() {
-  db=await new Promise((resolve,reject)=>{
-    const r=indexedDB.open('shabbattv-web',1);
-    r.onupgradeneeded=()=>r.result.createObjectStore('state');
-    r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);
-  });
   worker=new Worker('./storage-worker.js');
   worker.onmessage=({data})=>{
     const p=pending.get(data.request);if(!p)return;
@@ -18,15 +15,8 @@ export async function openStore() {
   const root=await navigator.storage.getDirectory();
   return root;
 }
-export function readState() {
-  return new Promise((resolve,reject)=>{const r=db.transaction('state').objectStore('state').get('library');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});
-}
-export function writeState(state) {
-  return new Promise((resolve,reject)=>{
-    const tx=db.transaction('state','readwrite');tx.objectStore('state').put(state,'library');
-    tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error??Error('Sauvegarde interrompue.'));
-  });
-}
+export const readState=()=>stateStore.read();
+export const writeState=state=>stateStore.write(state);
 export function operate(action,id,details={},progress) {
   return new Promise((resolve,reject)=>{const request=++sequence;pending.set(request,{resolve,reject,progress});worker.postMessage({request,action,id,...details});});
 }
