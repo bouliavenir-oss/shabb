@@ -19,12 +19,17 @@ def generate():
         ref = add('ref:' + path, isa='PBXFileReference', lastKnownFileType='sourcecode.swift', path=path, sourceTree='<group>')
         refs.append(ref)
         sources.append(add('build:' + path, isa='PBXBuildFile', fileRef=ref))
+    resource_builds = []
+    for path, kind in [('ios/App/Assets.xcassets', 'folder.assetcatalog'), ('ios/App/PrivacyInfo.xcprivacy', 'text.xml')]:
+        ref = add('ref:' + path, isa='PBXFileReference', lastKnownFileType=kind, path=path, sourceTree='<group>')
+        refs.append(ref)
+        resource_builds.append(add('build:' + path, isa='PBXBuildFile', fileRef=ref))
     product = add('product', isa='PBXFileReference', explicitFileType='wrapper.application', path='ShabbatTV.app', sourceTree='BUILT_PRODUCTS_DIR')
     products = add('products', isa='PBXGroup', children=[product], name='Products', sourceTree='<group>')
     group = add('root', isa='PBXGroup', children=refs + [products], sourceTree='<group>')
     source_phase = add('sources', isa='PBXSourcesBuildPhase', buildActionMask=2147483647, files=sources, runOnlyForDeploymentPostprocessing=0)
     frameworks = add('frameworks', isa='PBXFrameworksBuildPhase', buildActionMask=2147483647, files=[], runOnlyForDeploymentPostprocessing=0)
-    resources = add('resources', isa='PBXResourcesBuildPhase', buildActionMask=2147483647, files=[], runOnlyForDeploymentPostprocessing=0)
+    resources = add('resources', isa='PBXResourcesBuildPhase', buildActionMask=2147483647, files=resource_builds, runOnlyForDeploymentPostprocessing=0)
     configs = []; project_configs = []
     for name in ['Debug', 'Release']:
         settings = dict(PRODUCT_NAME='ShabbatTV', PRODUCT_BUNDLE_IDENTIFIER='com.shabbattv.ipad',
@@ -32,7 +37,7 @@ def generate():
             SWIFT_VERSION='5.0', IPHONEOS_DEPLOYMENT_TARGET='17.0', TARGETED_DEVICE_FAMILY='2',
             SDKROOT='iphoneos', SUPPORTED_PLATFORMS='iphoneos iphonesimulator',
             SUPPORTS_MACCATALYST='NO', CODE_SIGN_STYLE='Automatic',
-            CURRENT_PROJECT_VERSION='1', MARKETING_VERSION='0.1.0',
+            CURRENT_PROJECT_VERSION='1', MARKETING_VERSION='0.1.0', ASSETCATALOG_COMPILER_APPICON_NAME='AppIcon',
             SWIFT_OPTIMIZATION_LEVEL='-Onone' if name == 'Debug' else '-O',
             DEBUG_INFORMATION_FORMAT='dwarf' if name == 'Debug' else 'dwarf-with-dsym',
             ENABLE_TESTABILITY='YES' if name == 'Debug' else 'NO',

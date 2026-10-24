@@ -14,7 +14,7 @@ Les résultats réellement obtenus sont consignés dans `VERIFICATION.md` après
 
 - Compte Apple Developer non disponible ; signature, App Store Connect et TestFlight non configurés.
 - Aucun essai sur iPad ni télévision, aucune mesure de 24/36 h.
-- Icônes de distribution et manifeste de confidentialité Apple à compléter avant TestFlight/App Store.
+- Icône et manifeste de confidentialité inclus ; déclarations App Store Connect et validation de distribution Apple encore à compléter.
 - Tests d’intégration du stockage et d’AVPlayer à ajouter sur outils Apple.
 - Précision des transitions, codecs, route HDMI, Accès guidé et consommation à mesurer.
 

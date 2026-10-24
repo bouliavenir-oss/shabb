@@ -75,6 +75,26 @@
       "isa" = "PBXBuildFile";
       "fileRef" = "BA41B71640BFC77118CE3A53";
     };
+    "90B1070C4C79EDB4D8EB8D66" = {
+      "isa" = "PBXFileReference";
+      "lastKnownFileType" = "folder.assetcatalog";
+      "path" = "ios/App/Assets.xcassets";
+      "sourceTree" = "<group>";
+    };
+    "3198F0F7B179A5C779C3F2A7" = {
+      "isa" = "PBXBuildFile";
+      "fileRef" = "90B1070C4C79EDB4D8EB8D66";
+    };
+    "29F5ACCC9C8C2DFAD4D1FC4C" = {
+      "isa" = "PBXFileReference";
+      "lastKnownFileType" = "text.xml";
+      "path" = "ios/App/PrivacyInfo.xcprivacy";
+      "sourceTree" = "<group>";
+    };
+    "FEEAA00AAA103C201E962603" = {
+      "isa" = "PBXBuildFile";
+      "fileRef" = "29F5ACCC9C8C2DFAD4D1FC4C";
+    };
     "A8792157CB4F27FB949C035F" = {
       "isa" = "PBXFileReference";
       "explicitFileType" = "wrapper.application";
@@ -89,7 +109,7 @@
     };
     "4813494D137E1631BBA301D5" = {
       "isa" = "PBXGroup";
-      "children" = ("9BB3567448E08584B9720E47", "C9F7BC1CC4D13418FD76965D", "AB215E98D59D47A2F6D45315", "5928A87C3224B60547F58F6E", "529921ACA8A739967B1BCBAC", "2A2F79B98357C3382B50C723", "BA41B71640BFC77118CE3A53", "0A3E27B8CA818264D75C8D81");
+      "children" = ("9BB3567448E08584B9720E47", "C9F7BC1CC4D13418FD76965D", "AB215E98D59D47A2F6D45315", "5928A87C3224B60547F58F6E", "529921ACA8A739967B1BCBAC", "2A2F79B98357C3382B50C723", "BA41B71640BFC77118CE3A53", "90B1070C4C79EDB4D8EB8D66", "29F5ACCC9C8C2DFAD4D1FC4C", "0A3E27B8CA818264D75C8D81");
       "sourceTree" = "<group>";
     };
     "878A52FC5FF6A57D50B7B870" = {
@@ -107,7 +127,7 @@
     "41D311A605520FC7B8B9A980" = {
       "isa" = "PBXResourcesBuildPhase";
       "buildActionMask" = 2147483647;
-      "files" = ();
+      "files" = ("3198F0F7B179A5C779C3F2A7", "FEEAA00AAA103C201E962603");
       "runOnlyForDeploymentPostprocessing" = 0;
     };
     "AA9B1D3BE1353EBD76471D11" = {
@@ -126,6 +146,7 @@
         "CODE_SIGN_STYLE" = "Automatic";
         "CURRENT_PROJECT_VERSION" = "1";
         "MARKETING_VERSION" = "0.1.0";
+        "ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
         "SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
         "DEBUG_INFORMATION_FORMAT" = "dwarf";
         "ENABLE_TESTABILITY" = "YES";
@@ -158,6 +179,7 @@
         "CODE_SIGN_STYLE" = "Automatic";
         "CURRENT_PROJECT_VERSION" = "1";
         "MARKETING_VERSION" = "0.1.0";
+        "ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
         "SWIFT_OPTIMIZATION_LEVEL" = "-O";
         "DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
         "ENABLE_TESTABILITY" = "NO";

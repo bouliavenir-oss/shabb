@@ -161,7 +161,9 @@ import Combine
                         guard finished else { return }
                         // Never expose a stale frame after crossing a schedule boundary.
                         guard case .video(let stillSlot, _, _, let currentVolume) = Scheduler.decision(at: Date(), plan: self.plan, media: self.media), stillSlot == slot else { return }
-                        self.lastProgress = Date(); self.lastPosition = self.player.currentTime().seconds
+                        // A successful seek is not evidence of decoded playback progress.
+                        // Preserve the watchdog deadline so repeated seeks cannot hide a stall.
+                        self.lastPosition = self.player.currentTime().seconds
                         self.player.volume = currentVolume; self.isBlack = false
                         self.player.play(); self.setState(.playing)
                         self.log.add("seek", "\(slot): position=\(offset)")

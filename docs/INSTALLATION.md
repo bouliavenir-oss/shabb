@@ -12,7 +12,7 @@ Le propriétaire n’a actuellement pas de compte Apple Developer. Les étapes s
 
 1. S’inscrire personnellement à l’[Apple Developer Program](https://developer.apple.com/programs/enroll/) avec son compte Apple et terminer la vérification/adhésion sur le site Apple. Ne transmettre aucun mot de passe à l’assistant.
 2. Dans App Store Connect, créer l’application ShabbatTV avec un identifiant unique appartenant au compte. Remplacer `com.shabbattv.ipad` si nécessaire.
-3. Sur un Mac personnel ou distant autorisé, ouvrir le projet Xcode, sélectionner l’équipe dans **Signing & Capabilities**, choisir **Any iOS Device**, puis **Product → Archive** et **Distribute App → App Store Connect**. Ajouter les icônes et déclarations de confidentialité avant validation de distribution.
+3. Sur un Mac personnel ou distant autorisé, ouvrir le projet Xcode, sélectionner l’équipe dans **Signing & Capabilities**, choisir **Any iOS Device**, puis **Product → Archive** et **Distribute App → App Store Connect**. L’icône et le manifeste sont inclus ; compléter les déclarations App Store Connect avant validation de distribution.
 4. Ajouter le compte comme testeur interne et installer TestFlight sur l’iPad. Accepter l’invitation et installer la version traitée par Apple.
 5. Faire les essais du guide matériel. Un build TestFlight expire après **90 jours** : renouveler et tester avant un voyage, jamais pendant Shabbat.
 
