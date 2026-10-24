@@ -2,6 +2,8 @@
 
 Application native iPadOS 17+ en SwiftUI / AVFoundation pour préparer une diffusion locale à heures fixes et une sortie externe sans commandes. **Version de développement : ne pas utiliser pour un Shabbat réel avant validation sur iPad.**
 
+Première vérification Apple réussie : 13 tests Swift, compilation simulateur, archive appareil non signée et lancement sur simulateur. Voir [les preuves et limites](docs/VERIFICATION.md). Aucun test HDMI physique ni test réel de 36 h n’a été effectué.
+
 ## Ce que contient cette première version
 
 - Import multiple depuis Fichiers, copie dans Application Support, analyse AVFoundation, SHA-256, détection des doublons.
